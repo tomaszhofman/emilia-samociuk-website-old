@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Bigilla';
+    src: url('/emilia-samociuk/static/fonts/bigilla.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bigilla';
+    src: url('/emilia-samociuk/static/fonts/bigilla-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/emilia-samociuk/static/fonts/montserrat.woff2') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/emilia-samociuk/static/fonts/montserrat-bold.woff2') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+
+
+
+
+

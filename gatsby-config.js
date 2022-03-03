@@ -25,5 +25,18 @@ module.exports = {
       },
       __key: 'images',
     },
+    {
+      resolve: 'gatsby-omni-font-loader',
+      options: {
+        mode: 'async',
+        enableListener: true,
+        custom: [
+          {
+            name: ['Bigilla', 'Bigilla Bold'],
+            file: 'src/fonts/fonts.css',
+          },
+        ],
+      },
+    },
   ],
 };
