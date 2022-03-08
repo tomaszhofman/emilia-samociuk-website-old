@@ -1,6 +1,11 @@
 import { createGlobalStyle, css } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`${css`
+  :root {
+    --color-primary: hsla(30, 29%, 95%, 1);
+    --color-text-primary: hsla(37, 10%, 16%, 1);
+    --color-text-secondary: hsla(0, 0%, 26%, 1);
+  }
   *::before,
   *::after {
     box-sizing: border-box;
@@ -29,6 +34,7 @@ export const GlobalStyle = createGlobalStyle`${css`
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     font-size: 1.6rem;
+    background-color: var(--color-primary);
   }
   /*
       6. Improve media defaults

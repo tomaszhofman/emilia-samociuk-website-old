@@ -30,10 +30,18 @@ module.exports = {
       options: {
         mode: 'async',
         enableListener: true,
+        interval: 500,
+        timeout: 30000,
         custom: [
           {
-            name: ['Bigilla', 'Bigilla Bold'],
+            name: 'Bigilla',
             file: 'src/fonts/fonts.css',
+          },
+        ],
+        web: [
+          {
+            name: 'Montserrat',
+            file: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap',
           },
         ],
       },
