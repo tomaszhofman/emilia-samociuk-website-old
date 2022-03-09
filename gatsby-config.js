@@ -1,4 +1,5 @@
 /** @type {import('gatsby').GatsbyConfig} */
+
 module.exports = {
   siteMetadata: {
     title: ``,
@@ -28,14 +29,14 @@ module.exports = {
     {
       resolve: 'gatsby-omni-font-loader',
       options: {
-        mode: 'async',
         enableListener: true,
+        preconnect: ['https://fonts.gstatic.com'],
         interval: 500,
         timeout: 30000,
         custom: [
           {
-            name: 'Bigilla',
-            file: 'src/fonts/fonts.css',
+            name: ['Bigilla'],
+            file: '/fonts/css/all.css',
           },
         ],
         web: [
