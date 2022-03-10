@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 interface StyledBarProps {
@@ -20,13 +20,13 @@ const BarContainer = styled.div`
 const Bar = () => {
   const [scrollPosition, setScrollPosition] = useState<number>(0);
 
-  const initializeScrollBar = () => {
+  const initializeScrollBar = useCallback(() => {
     const distanceFromPageTop = document.body.scrollTop || document.documentElement.scrollTop;
     const activeHeight =
       document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrolled = (distanceFromPageTop / activeHeight) * 100;
     setScrollPosition(scrolled);
-  };
+  }, []);
 
   useEffect(() => {
     document.addEventListener('scroll', initializeScrollBar);
