@@ -4,7 +4,7 @@ import { Bar } from '../Bar';
 import styled from 'styled-components';
 
 const StyledSection = styled.section`
-  padding: 25rem 0 9.8rem 0;
+  padding: 8rem 0 9.8rem 0;
 `;
 
 const Text = styled.p`

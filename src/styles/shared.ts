@@ -10,9 +10,8 @@ const spaceBetween = css`
 `;
 
 const Container = styled.div`
-  max-width: 1244px;
   margin: 0 auto;
-  padding: 0 3.2rem;
+  padding: 0 4rem;
 `;
 
 export { Container, flex, spaceBetween };

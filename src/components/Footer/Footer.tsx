@@ -22,7 +22,7 @@ const Footer = () => {
         </p>
       </CopyRights>
       <Author>
-        <p>Crafted by Tomasz Hofman</p>
+        <p>Developed by Tomasz Hofman</p>
       </Author>
     </Wrapper>
   );

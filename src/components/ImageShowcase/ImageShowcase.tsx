@@ -14,7 +14,7 @@ const ImageShowcase = () => {
     <Wrapper>
       <canvas ref={canvasRef} width={window.innerWidth} height={window.innerHeight} />
       <Sticker>
-        <p>Move your cursor to try play with it.</p>
+        <p>Move your cursor to try it.</p>
       </Sticker>
     </Wrapper>
   );

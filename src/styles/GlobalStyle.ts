@@ -28,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`${css`
   body {
     height: 100%;
     font-family: Montserrat, Bigilla;
-    font-size: 62.5%;
+    font-size: 1vw;
   }
 
   /*

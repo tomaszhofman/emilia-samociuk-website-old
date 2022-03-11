@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container, spaceBetween } from '../../styles/shared';
+import * as mq from '../../styles/media-queries';
 
-const MainContent = styled.div`
-  font-size: 20rem;
+const MainContent = styled.h1`
+  font-size: clamp(1.5rem, 15rem, 16rem);
   font-family: 'Bigilla';
   font-weight: 700;
   color: var(--color-text-secondary);
@@ -18,7 +19,7 @@ const MainContent = styled.div`
 
 const StyledSection = styled.section`
   min-height: 100%;
-  padding: 20rem 0 9.8rem 0;
+  padding: 9.6rem 0 4.8rem 0;
 `;
 
 const ShortDescription = styled.div`
@@ -34,7 +35,13 @@ const ShortDescription = styled.div`
 const StyledContainer = styled(Container)`
   display: flex;
   align-items: flex-end;
-  ${spaceBetween}
+  ${spaceBetween};
+
+  ${[mq.large]} {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
 `;
 
 const Hero = () => {

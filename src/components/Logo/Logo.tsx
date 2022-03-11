@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   font-family: 'Bigilla';
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 1vw, 6rem);
   line-height: 1.9rem;
 `;
 
