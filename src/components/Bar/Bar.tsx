@@ -1,21 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
-
-interface StyledBarProps {
-  readonly height: number;
-}
-
-const StyledBar = styled.div<StyledBarProps>`
-  width: ${({ height }) => `${height}%`};
-  height: 1px;
-  background-color: black;
-`;
-
-const BarContainer = styled.div`
-  width: 100%;
-  height: 2px;
-  background-color: transparent;
-`;
+import { BarContainer, StyledBar } from './Bar.styled';
 
 const Bar = () => {
   const [scrollPosition, setScrollPosition] = useState<number>(0);
@@ -34,7 +19,7 @@ const Bar = () => {
     return () => {
       document.removeEventListener('scroll', initializeScrollBar);
     };
-  }, []);
+  }, [initializeScrollBar]);
 
   return (
     <BarContainer>

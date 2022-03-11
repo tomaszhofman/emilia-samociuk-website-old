@@ -1,14 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
-import { flex, spaceBetween } from '../../styles/shared';
 import { Logo } from '../Logo';
 import Button from '../Button/Button';
-
-const Wrapper = styled.header`
-  ${flex};
-  ${spaceBetween};
-  padding: 3.2rem;
-`;
+import { Wrapper } from './Header.styled';
 
 const Header = () => {
   return (
