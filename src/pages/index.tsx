@@ -4,6 +4,8 @@ import { GlobalStyle } from '../styles/GlobalStyle';
 import { Header } from '../components/Header';
 import { SelfDescription } from '../components/SelfDescription';
 import { ImageShowcase } from '../components/ImageShowcase';
+import { ContactMe } from '../components/ContactMe';
+import { Footer } from '../components/Footer';
 
 // markup
 const IndexPage = () => {
@@ -14,6 +16,8 @@ const IndexPage = () => {
       <Hero />
       <SelfDescription />
       <ImageShowcase />
+      <ContactMe />
+      <Footer />
     </>
   );
 };
