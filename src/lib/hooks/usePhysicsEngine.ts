@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Engine, Render, Bodies, World, Runner, Composite, Composites, Body } from 'matter-js';
+import { useResize } from './useResize';
 
 export const usePhysicsEngine = (ref: React.MutableRefObject<HTMLCanvasElement> | null) => {
   const [engine, setEngine] = useState<Engine>();
   const [renderer, setRenderer] = useState<Render>();
+  const [currentWindowSize] = useResize();
+
+  console.log(currentWindowSize);
 
   useEffect(() => {
     if (!ref || !ref.current) {
@@ -16,8 +20,8 @@ export const usePhysicsEngine = (ref: React.MutableRefObject<HTMLCanvasElement> 
       engine: engine1,
       canvas: ref.current,
       options: {
-        width: ref.current.width,
-        height: ref.current.height,
+        width: currentWindowSize.width,
+        height: currentWindowSize.height,
         showVelocity: true,
         showAngleIndicator: false,
         wireframes: false,
@@ -30,7 +34,7 @@ export const usePhysicsEngine = (ref: React.MutableRefObject<HTMLCanvasElement> 
 
     setRenderer(renderer1);
     setEngine(engine1);
-  }, [ref]);
+  }, [ref, currentWindowSize]);
 
   return [engine, renderer];
 };

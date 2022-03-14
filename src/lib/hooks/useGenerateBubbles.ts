@@ -17,7 +17,7 @@ export const useGenerateBubbles = (
     const wallOptions = {
       isStatic: true,
       render: {
-        fillStyle: 'transparent',
+        fillStyle: 'red',
       },
     };
     const stack = Composites.stack(300, 0, 2, 3, 5, 5, function (x: number, y: number) {

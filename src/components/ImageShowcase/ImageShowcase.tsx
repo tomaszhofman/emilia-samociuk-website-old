@@ -3,6 +3,7 @@ import { usePhysicsEngine } from '../../lib/hooks/usePhysicsEngine';
 import { useGenerateBubbles } from '../../lib/hooks/useGenerateBubbles';
 import { Engine } from 'matter-js';
 import { Sticker, Wrapper } from './ImageShowCase.styled';
+import { useResize } from '../../lib/hooks/useResize';
 
 const ImageShowcase = () => {
   const canvasRef = useRef() as React.MutableRefObject<HTMLCanvasElement>;
