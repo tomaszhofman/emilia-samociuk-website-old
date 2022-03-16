@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { flex } from '../../styles/shared';
 import * as mq from '../../styles/media-queries';
 
-console.log([mq.large]);
-
 export const Wrapper = styled.footer`
   height: 4rem;
   padding: 0 5rem 2rem 5rem;

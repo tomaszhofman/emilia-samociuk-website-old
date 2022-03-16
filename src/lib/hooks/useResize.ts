@@ -13,7 +13,6 @@ export const useResize = () => {
   });
 
   const handleResize = useCallback(() => {
-    console.log('dupa');
     setCurrentWindowSize({
       height: window.innerHeight,
       width: window.innerWidth,
@@ -21,10 +20,10 @@ export const useResize = () => {
   }, []);
 
   useEffect(() => {
-    window.addEventListener('resize', throttle(handleResize, 150));
+    window.addEventListener('resize', throttle(handleResize, 1000));
 
     return () => {
-      window.removeEventListener('resize', throttle(handleResize, 150));
+      window.removeEventListener('resize', throttle(handleResize, 1000));
     };
   }, [handleResize]);
 

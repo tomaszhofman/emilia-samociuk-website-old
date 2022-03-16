@@ -10,34 +10,47 @@ export const useGenerateBubbles = (
       return;
     }
 
-    console.log(engine, ref);
-
     const boundOffset = 18;
     const wallThick = 80;
     const wallOptions = {
       isStatic: true,
       render: {
-        fillStyle: 'red',
+        fillStyle: 'black',
       },
     };
-    const stack = Composites.stack(300, 0, 2, 3, 5, 5, function (x: number, y: number) {
-      return Bodies.circle(x, y, 10 + Math.random() * 200, {
-        frictionAir: 0,
-        friction: 0.1,
-        mass: 3,
-        render: {},
-      });
-    });
+    const stack = Composites.stack(
+      document.body.clientWidth / 2,
+      document.body.clientHeight / 30 - 200,
+      2,
+      3,
+      5,
+      5,
+      function (x: number, y: number) {
+        return Bodies.circle(x, y, 10 + Math.random() * (document.body.clientWidth / 6), {
+          frictionAir: 0.1,
+          friction: 0.1,
+          mass: 2,
+          render: {},
+        });
+      },
+    );
 
     Composite.add(engine.world, [
       stack,
+      //Walls
       Bodies.rectangle(0, -boundOffset, document.body.clientWidth * 2, wallThick, wallOptions),
-      Bodies.rectangle(boundOffset, 700, document.body.clientWidth * 200, wallThick, wallOptions),
-      Bodies.rectangle(-boundOffset, 0, 600, document.body.clientHeight * 2, wallOptions),
+      Bodies.rectangle(
+        boundOffset,
+        document.body.clientHeight,
+        document.body.clientWidth * 200,
+        wallThick,
+        wallOptions,
+      ),
+      Bodies.rectangle(-boundOffset, 0, wallThick, document.body.clientHeight * 2, wallOptions),
       Bodies.rectangle(
         document.body.clientWidth + boundOffset,
-        600,
-        600,
+        document.body.clientHeight,
+        wallThick,
         document.body.clientHeight * 2,
         wallOptions,
       ),

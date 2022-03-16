@@ -7,8 +7,6 @@ export const usePhysicsEngine = (ref: React.MutableRefObject<HTMLCanvasElement> 
   const [renderer, setRenderer] = useState<Render>();
   const [currentWindowSize] = useResize();
 
-  console.log(currentWindowSize);
-
   useEffect(() => {
     if (!ref || !ref.current) {
       return;
