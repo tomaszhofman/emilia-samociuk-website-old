@@ -1,10 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { usePhysicsEngine } from '../../lib/hooks/usePhysicsEngine';
 import { useGenerateBubbles } from '../../lib/hooks/useGenerateBubbles';
 import { Engine, Render } from 'matter-js';
 import { Sticker, Wrapper } from './ImageShowCase.styled';
-import { useResize } from '../../lib/hooks/useResize';
 import { useMouseControls } from '../../lib/hooks/useMouseControls';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const ImageShowcase = () => {
   const canvasRef = useRef() as React.MutableRefObject<HTMLCanvasElement>;
@@ -17,7 +17,7 @@ const ImageShowcase = () => {
     <Wrapper>
       <canvas ref={canvasRef} width={window.innerWidth} height={window.innerHeight} />
       <Sticker>
-        <p>Move your cursor to try it.</p>
+        <p>Grab and try to move it.</p>
       </Sticker>
     </Wrapper>
   );

@@ -1,4 +1,7 @@
 /** @type {import('gatsby').GatsbyConfig} */
+require('dotenv').config({
+  path: `.env`,
+});
 
 module.exports = {
   siteMetadata: {
@@ -45,6 +48,14 @@ module.exports = {
             file: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap',
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: process.env.DATOCMS_READ_API_KEY,
+        previewMode: false,
+        disableLiveReload: false,
       },
     },
   ],

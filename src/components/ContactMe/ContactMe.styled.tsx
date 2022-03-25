@@ -3,7 +3,7 @@ import { Container, flex } from '../../styles/shared';
 import * as mq from '../../styles/media-queries';
 
 export const Section = styled.section`
-  padding: 0 0 10rem 0;
+  padding: 6.4rem 0 10rem 0;
 `;
 
 export const StyledContainer = styled(Container)`

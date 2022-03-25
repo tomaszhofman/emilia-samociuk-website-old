@@ -8,8 +8,8 @@ export const Wrapper = styled.div`
 
 export const Sticker = styled.div`
   position: absolute;
-  right: clamp(20rem, 6rem, 6rem);
-  bottom: clamp(20rem, 8rem, 9rem);
+  right: clamp(2rem, 6rem, 6rem);
+  bottom: clamp(2rem, 8rem, 9rem);
   width: 10rem;
   height: 10rem;
   border-radius: 50%;

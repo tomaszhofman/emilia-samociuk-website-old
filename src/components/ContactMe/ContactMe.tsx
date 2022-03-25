@@ -8,7 +8,6 @@ const ContactMe = () => {
     <Section>
       <StyledContainer>
         <Title>Lets’s connect</Title>
-
         <div>
           <List>
             {contactProviders.map(provider => {
